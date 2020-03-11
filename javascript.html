@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body onload="cambiar()">
+
+<p><img id="ia" alt="Imagen aleatoria" src="Papel.jpg" /></p>
+
+<button onclick="cambiar();">Jugar</button></p>
+<script type="text/javascript">
+	function rand(n){
+// creamos un numero al azar entre 0 y 2 (o cual sea la cantidad de imágenes)
+ return(Math.floor(Math.random() * n + 1 ));
+}
+//guardas imagenes en el array
+var cambia_imagen = new Array();
+cambia_imagen[0] = "Piedra.jpg";
+cambia_imagen[1] = "Papel.jpg";
+cambia_imagen[2] = "Tijera.jpg";
+//la función para que al clickear establezca el source del tag imagem que tiene id "ia" (Imagen aleatoria)
+//como no son tantas, puede que alguna vez se repita 2 veces la misma
+//incluso, si usamos numeros para las imágenes, la script puede ser más sencilla
+
+
+function cambiar(){
+     document.getElementById("ia").src = cambia_imagen[rand(3) -1];
+}
+</script>
+</body>
+</html>
