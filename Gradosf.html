@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Conversión de grados a fahrenheit</title>
+</head>
+<body>
+<h1>Conversión de grados a fahrenheit</h1>
+
+  <form action="#" method="post">
+  <label for="c">GradoCelsius:</label>
+ <input type="number" id="c" name="c" min="1">
+ <input type="button" name="enviar" id="enviar" value="calcular" onclick="convertir()" />
+ </form>
+
+ 
+ 
+ <script type="text/javascript">
+ 
+ function convertir(){
+	 var cel = document.getElementById("c").value;
+	 var fahrenheit=((cel*9)/5)+32;
+	 
+	 
+	 alert(fahrenheit+"F");
+ }
+ 
+ 
+ </script>
+ 
+ 
+ 
+</body>
+</html> 
